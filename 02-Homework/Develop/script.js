@@ -56,13 +56,10 @@ function generatePassword() {
   var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(",")", "{", "}", "=", "!","<", ">", "|", ":", "-", "~", "[", "]" ]
-  var all = numbers.concat(lowerLetters.concat(upperLetters.concat(specialChar)))
   var potentialPasswordChar = [];
   var password = [];
 
  while (password.length < length) {
-  //potentialPasswordChar = all [Math.floor(Math.random() * all.length)], 
-  //password.push(potentialPasswordChar)
 
     if (passwordOptions.hasSpecialChar) {
       potentialPasswordChar = specialChar [Math.floor(Math.random() * specialChar.length)], 
@@ -86,5 +83,8 @@ function generatePassword() {
     }
 
   }
-  alert("Here is your Password: " + password.join(''))  
+
+  return (password.join(''))
+
+  //alert("Here is your Password: " + password.join(''))  
 }
