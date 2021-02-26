@@ -86,5 +86,5 @@ function generatePassword() {
 
   return (password.join(''))
 
-  //alert("Here is your Password: " + password.join(''))  
+  //alert("Here is your Password: " + password.join(''))  this will create an alert showing the password
 }
